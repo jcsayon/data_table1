@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form and Table Filter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="bg-gray-100 p-5">
+
+    <div id="form">
+        <input type="text" id="firstName" placeholder="First Name" class="input-bordered input-primary w-full max-w-xs"/>
+        <input type="text" id="lastName" placeholder="Last Name" class="input-bordered input-primary w-full max-w-xs"/>
+        <div>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+        </div>
+        <input type="number" id="age" placeholder="Age" class="input-bordered input-primary w-full max-w-xs"/>
+        <select id="position" class="input input-bordered input-primary w-full max-w-xs">
+            <option value="Teacher">Teacher</option>
+            <option value="Student">Student</option>
+        </select>
+        <button id="addDataBtn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add Data</button>
+    </div>
+<br>
+
+    <div id="filters" class="my-4">
+        <input type="text" id="search" placeholder="Search by Full Name" class="input-bordered input-primary w-full max-w-xs"/>
+        <div>
+            <input type="radio" id="searchMale" name="searchGender" value="Male">
+            <label for="searchMale">Male</label>
+            <input type="radio" id="searchFemale" name="searchGender" value="Female">
+            <label for="searchFemale">Female</label>
+        </div>
+        <div>
+            <input type="radio" id="searchTeacher" name="searchPosition" value="Teacher">
+            <label for="searchTeacher">Teacher</label>
+            <input type="radio" id="searchStudent" name="searchPosition" value="Student">
+            <label for="searchStudent">Student</label>
+        </div>
+        <input type="number" id="ageMin" placeholder="Min Age" class="input"/>
+        <input type="number" id="ageMax" placeholder="Max Age" class="input"/>
+        <button id="filterBtn" class="btn">Filter</button>
+    </div>
+
+    <table id="dataTable" class="table-auto w-full">
+        <thead class="bg-gray-200">
+            <tr>
+                <th class="border border-gray-300 p-2">Full Name</th>
+                <th class="border border-gray-300 p-2">Gender</th>
+                <th class="border border-gray-300 p-2">Age</th>
+                <th class="border border-gray-300 p-2">Position</th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            
+        </tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>
